@@ -4,6 +4,7 @@ import FormElements from '../Components/FormElements';
 import { searchForShows, searchForPeople } from '../Api/Tvmaze';
 import ShowGrid from '../Components/Shows/ShowGrid';
 import ActorsGrid from '../Components/Actors/ActorsGrid';
+
 const Home = () => {
   const [filter, setFilter] = useState(null);
 
