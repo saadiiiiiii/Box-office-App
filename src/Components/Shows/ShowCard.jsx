@@ -1,4 +1,4 @@
-const ShowCard = ({ name, image, id, summary, onStarrMeClick }) => {
+const ShowCard = ({ name, image, id, summary, onStarrMeClick, isStarred }) => {
   const summaryStripped = summary
     ? summary.split().slice(0, 10).join('').replace(/<.+>/g, '')
     : 'no description';
@@ -14,8 +14,7 @@ const ShowCard = ({ name, image, id, summary, onStarrMeClick }) => {
           Read More
         </a>
         <button type="button" onClick={() => onStarrMeClick(id)}>
-          {' '}
-          Star me
+          {isStarred ? 'Unstarme' : 'Star me'}
         </button>
       </div>
     </div>
