@@ -4,6 +4,7 @@ import FormElements from '../Components/FormElements';
 import { searchForShows, searchForPeople } from '../Api/Tvmaze';
 import ShowGrid from '../Components/Shows/ShowGrid';
 import ActorsGrid from '../Components/Actors/ActorsGrid';
+import { TextCenter } from '../Components/Common/TextCenter';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
@@ -38,10 +39,10 @@ const Home = () => {
   };
   const renderApiData = () => {
     if (apierror) {
-      return <div>Error:{apierror.message}</div>;
+      return <TextCenter>Error:{apierror.message}</TextCenter>;
     }
     if (apiData?.length === 0) {
-      return <div>No results</div>;
+      return <TextCenter>No results</TextCenter>;
     }
     if (apiData) {
       {
