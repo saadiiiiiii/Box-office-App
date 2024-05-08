@@ -23,7 +23,6 @@ const Show = () => {
   if (showData) {
     return (
       <ShowPageWrapper>
-        <BackHomeWrapper to="/">Go Back To Home Page</BackHomeWrapper>
         <ShowMainData
           image={showData.image}
           name={showData.name}
